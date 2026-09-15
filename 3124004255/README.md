@@ -38,8 +38,8 @@
 2. 获取项目代码（或直接解压项目压缩包）：
 
    ```bash
-   git clone <仓库地址>
-   cd Paperplagiarismchecking
+   git clone https://github.com/MWQ111/paper-check.git
+   cd paper-check/3124004255
    ```
 
 3. 安装依赖：
