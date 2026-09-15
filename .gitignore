@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# 测试与覆盖率
+.coverage
+htmlcov/
+
+# 虚拟环境
+.venv/
+venv/
+
+# 程序运行输出
+*.out
+3124004255/ans.txt
+3124004255/prof.out
+3124004255/htmlcov/
+3124004255/.coverage
