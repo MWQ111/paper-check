@@ -170,21 +170,23 @@ similarity = (A · B) / (|A| × |B|)
 ## 六、目录结构
 
 ```text
-Paperplagiarismchecking/
-├── main.py                    # 程序入口，包含全部核心算法
-├── requirements.txt           # 依赖说明（仅标准库）
-├── README.md                  # 项目说明（本文件）
-├── PSP.md                     # PSP 时间记录表
-├── .gitignore                 # Git 忽略规则
-├── tests/
-│   ├── test_similarity.py     # 单元测试（20 个用例）
-│   └── test_data/             # 测试数据
-│       ├── orig.txt           # 样例原文
-│       └── orig_add.txt       # 样例抄袭版论文
-└── 学号/                       # 预留文件夹（以学号为名）
+Paperplagiarismchecking/           # GitHub 仓库根目录
+├── 3124004255/                    # 学号文件夹（存放作业代码）
+│   ├── main.py                    # 程序入口，包含全部核心算法
+│   ├── requirements.txt           # 依赖说明（仅标准库）
+│   ├── README.md                  # 项目说明（本文件）
+│   └── tests/
+│       ├── test_similarity.py     # 单元测试（39 个用例）
+│       └── test_data/
+│           ├── orig.txt           # 样例原文
+│           └── orig_add.txt       # 样例抄袭版论文
+├── PSP.md                         # PSP 时间记录表
+└── .gitignore                     # Git 忽略规则
 ```
 
-> `学号/` 文件夹用于存放作业提交材料，提交前请将其重命名为本人学号。
+说明：题目要求在 GitHub 仓库根目录下新建「以学号为名」的文件夹，
+因此本项目的代码位于 3124004255/ 子目录下，
+而 PSP.md 与 .gitignore 等项目管理文件放在仓库根目录。
 
 ## 七、测试方法
 
@@ -204,7 +206,7 @@ python tests/test_similarity.py
 
 ### 7.2 测试覆盖范围
 
-单元测试共 **20 个用例**，覆盖：文本清洗、中英文分词与 2-gram、
+单元测试共 **39 个用例**，覆盖：文本清洗、中英文分词与 2-gram、
 完全相同 / 完全不同 / 部分相似文本、空文本、纯数字文本、
 余弦相似度空向量、GBK 编码回退、长文本性能（10000 次重复需在 5 秒内完成）、
 文件不存在异常、命令行参数错误处理，以及基于 `test_data/` 的端到端验证。
